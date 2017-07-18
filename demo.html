@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Map Demo</title>
+    <script src="/assets/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/main.bundle.css" />
+</head>
+
+<body style="background: white">
+
+    <h1>Interactive Map Demo</h1>
+
+    <svg id="usa-map" />
+
+    <script>
+        InteractiveMapUSA.init(
+            {
+                id: "usa-map",
+                linkTo: "https://en.wikipedia.org/wiki/{{state}}",
+            }
+        )
+    </script>
+
+</body>
+
+</html>
