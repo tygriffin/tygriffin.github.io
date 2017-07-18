@@ -23,6 +23,20 @@
         )
     </script>
 
+    <p>In the body of the page, add:</p>
+    <pre>
+        &lt;svg id="usa-map" /&gt;
+
+        &lt;script&gt;
+            InteractiveMapUSA.init(
+                {
+                    id: "usa-map",
+                    linkTo: "https://en.wikipedia.org/wiki/{{state}}",
+                }
+            )
+        &lt;/script&gt;
+    </pre>
+
 </body>
 
 </html>
