@@ -1,0 +1,11 @@
+pre {
+    font-family: Courier New, Courier, monospace;
+    padding: 20px;
+    background: #efefef;
+    font-size: 18px;
+}
+
+h1, h2, h3, p {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+} 
