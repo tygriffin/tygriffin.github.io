@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Interactive Map Demo</title>
-    <script src="/assets/bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/main.bundle.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script src="/assets/usa-map.js"></script>
 </head>
 
 <body style="background: white">
@@ -16,12 +14,21 @@
     <svg id="usa-map" />
 
     <script>
-        InteractiveMapUSA.init(
-            {
-                id: "usa-map",
-                linkTo: "https://en.wikipedia.org/wiki/{{state}}",
-            }
-        )
+        InteractiveMapUSA.init({
+            mapSVGPath: "/assets/usa-map.svg",
+            maps: [
+                {
+                    id: "usa-map",
+                    linkTo: "https://en.wikipedia.org/wiki/{{state}}", // 'state' is the name of the state snake cased as in 'north_carolina'
+                    disabledStates: ["HI", "NY"],
+                    styles: {
+                        stateFill: "red",
+                        disabledStateFill: "#782abb",
+                        stateHoverFill: "#888fff"
+                    }
+                }
+            ]
+        })
     </script>
 
     <hr />
@@ -31,12 +38,21 @@
         &lt;svg id="usa-map" /&gt;
 
         &lt;script&gt;
-            InteractiveMapUSA.init(
-                {
-                    id: "usa-map",
-                    linkTo: "https://en.wikipedia.org/wiki/{{state}}",
-                }
-            )
+            InteractiveMapUSA.init({
+                mapSVGPath: "/assets/usa-map.svg",
+                maps: [
+                    {
+                        id: "usa-map",
+                        linkTo: "https://en.wikipedia.org/wiki/{{state}}", // 'state' is the name of the state snake cased as in 'north_carolina'
+                        disabledStates: ["HI", "NY"],
+                        styles: {
+                            stateFill: "red",
+                            disabledStateFill: "#782abb",
+                            stateHoverFill: "#888fff"
+                        }
+                    }
+                ]
+            })
         &lt;/script&gt;
     </pre>
 
