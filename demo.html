@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
 </head>
 
-<body style="background: white">
+<body style="background: yellow">
 
     <h1>Interactive Map Demo</h1>
 
@@ -21,7 +21,10 @@
                 {
                     id: "usa-map",
                     linkTo: "https://en.wikipedia.org/wiki/{{state}}", // 'state' is the name of the state snake cased as in 'north_carolina'
-                    disabledStates: ["HI", "NY"],
+                    links: {
+                        NC: "https://www.youtube.com/watch?v=lqWxGE7zSPA" // state links can be overridden on a state by state basis; 'linkTo' will still be used if this configuration is not defined
+                    },
+                    enabledStates: ["NC", "NY"], // disabling states is also possible, but not together with 'enabledStates' configuration
                     styles: {
                         stateFill: "red",
                         disabledStateFill: "#782abb",
@@ -45,7 +48,10 @@
                     {
                         id: "usa-map",
                         linkTo: "https://en.wikipedia.org/wiki/{{state}}", // 'state' is the name of the state snake cased as in 'north_carolina'
-                        disabledStates: ["HI", "NY"],
+                        links: {
+                            NC: "https://www.youtube.com/watch?v=lqWxGE7zSPA" // state links can be overridden on a state by state basis; 'linkTo' will still be used if this configuration is not defined
+                        },
+                        enabledStates: ["NC", "NY"], // disabling states is also possible, but not together with 'enabledStates' configuration
                         styles: {
                             stateFill: "red",
                             disabledStateFill: "#782abb",
